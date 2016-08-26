@@ -1,3 +1,4 @@
+var DashboardPlugin = require('webpack-dashboard/plugin');
 module.exports = {
   entry: './src/entry.js',
   output: {
@@ -15,5 +16,8 @@ module.exports = {
       }
     }
     ]
-  }
+  },
+  plugins: [
+    new DashboardPlugin()
+  ]
 };
