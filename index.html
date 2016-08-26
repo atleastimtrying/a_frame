@@ -1,0 +1,28 @@
+<script src="bundle.js"></script>
+
+<a-scene>
+  <a-assets>
+    <img id="skybox_image" src="office.jpg">
+  </a-assets>
+  <a-box color="lightgreen" id="cube1" opacity="1" width="2" height="2" depth="2" position="-13 2 -40" rotation="45 0 0">
+    <a-animation attribute="rotation" repeat="repeat" to="-315 0 0"></a-animation>
+  </a-box>
+  <a-box color="lightblue" id="cube2" width="2" height="2" depth="2" position="-13 2 40" rotation="0 0 45">
+    <a-animation attribute="rotation" repeat="repeat" to="0 0 -315"></a-animation>
+  </a-box>
+  <a-box color="lightyellow" id="cube3" width="2" height="2" depth="2" position="-13 2 0" rotation="0 45 0">
+    <a-animation attribute="rotation" repeat="repeat" to="0 -315 0"></a-animation>
+  </a-box>
+
+  <a-entity id="add_geom"></a>
+  <a-sky id="image-360" radius="50" src="#skybox_image"></a-sky>
+  <a-camera position="0 0 0">
+    <a-entity cursor="fuse: true;"
+          position="0 0 -1"
+          geometry="primitive: ring"
+          material="color: white; shader: flat"
+          scale="0.01 0.01 0.01"
+          >
+        </a-entity>
+  </a-camera>
+</a-scene>
